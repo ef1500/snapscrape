@@ -158,7 +158,6 @@ def main():
             snap_story_objects = snap_api.convert_json_to_snapmedia(snap_stories)
             download_media(snap_story_objects, args.location, args.skip_videos, args.skip_images, (not args.no_media_id), (not args.no_overlay_text), (not args.no_thumbnail), (not args.no_snap_media_title), (not args.no_media_timestamp), (not args.no_encode_video_timestamp), (not args.no_encode_video_title), (not args.no_seperate_media), args.zip)
         if not urls_or_ids:
-            # Your existing logic for downloading Snapchat media by other criteria
             snapchat_media_results = snap_api.get_snapchat_playlist(args.latitude, args.longitude, args.zoomlevel, radius=args.radius, max_fuzz_radius=args.max_fuzz_radius, epoch=args.epoch)
             snapchat_media = snap_api.convert_json_to_snapmedia(snapchat_media_results)
             download_media(snapchat_media, args.location, args.skip_videos, args.skip_images, (not args.no_media_id), (not args.no_overlay_text), (not args.no_thumbnail), (not args.no_snap_media_title), (not args.no_media_timestamp), (not args.no_encode_video_timestamp), (not args.no_encode_video_title), (not args.no_seperate_media), args.zip)
